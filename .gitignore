@@ -1,0 +1,12 @@
+# Dependency directories
+node_modules/
+
+# OS-generated files
+Thumbs.db
+
+# Log files
+*.log
+
+# Editor directories
+.idea/
+.vscode/

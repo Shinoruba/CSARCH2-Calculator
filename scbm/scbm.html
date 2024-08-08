@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequential Circuit Binary Multiplier</title>
+    <script defer src="scbm.js"></script>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+        <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+        <script type="text/javascript">
+            window.tailwind.config = {
+            darkMode: ['class'],
+            theme: {
+                extend: {
+                colors: {
+                    border: 'hsl(var(--border))',
+                    input: 'hsl(var(--input))',
+                    ring: 'hsl(var(--ring))',
+                    background: 'hsl(var(--background))',
+                    foreground: 'hsl(var(--foreground))',
+                    primary: {
+                    DEFAULT: 'hsl(var(--primary))',
+                    foreground: 'hsl(var(--primary-foreground))'
+                    },
+                    secondary: {
+                    DEFAULT: 'hsl(var(--secondary))',
+                    foreground: 'hsl(var(--secondary-foreground))'
+                    },
+                    destructive: {
+                    DEFAULT: 'hsl(var(--destructive))',
+                    foreground: 'hsl(var(--destructive-foreground))'
+                    },
+                    muted: {
+                    DEFAULT: 'hsl(var(--muted))',
+                    foreground: 'hsl(var(--muted-foreground))'
+                    },
+                    accent: {
+                    DEFAULT: 'hsl(var(--accent))',
+                    foreground: 'hsl(var(--accent-foreground))'
+                    },
+                    popover: {
+                    DEFAULT: 'hsl(var(--popover))',
+                    foreground: 'hsl(var(--popover-foreground))'
+                    },
+                    card: {
+                    DEFAULT: 'hsl(var(--card))',
+                    foreground: 'hsl(var(--card-foreground))'
+                    },
+                },
+                }
+            }
+            }
+        </script>
+        <style type="text/tailwindcss">
+            body {
+                @apply bg-gradient-to-b from-purple-700 to-blue-600 text-white;
+            }
+            .container {
+                @apply bg-white text-black p-6 rounded-lg shadow-lg w-full max-w-md mt-6;
+            }
+            .hidden {
+                display: none;
+            }
+        </style>
+</head>
+<body class="bg-gradient-to-b from-purple-700 to-blue-600 text-primary-foreground">
+    <div class="flex flex-col items-center justify-center min-h-screen px-4">
+        <h1 class="text-4xl font-serif font-extrabold mb-4 text-white">Sequential Circuit Binary Multiplier</h1>
+        <h2 class="text-2xl font-bold mb-8 text-zinc-200">Simulate the Process</h2>
+        <div class="container">
+            <div class="mb-4 w-full max-w-md">
+                <label for="multiplicand" class="block text-lg mb-2 label-text">Multiplicand (M):</label>
+                <input type="text" id="multiplicand" class="border border-gray-300 p-2 w-full rounded" placeholder="Enter multiplicand in binary">
+            </div>
+            <div class="mb-4 w-full max-w-md">
+                <label for="multiplier" class="block text-lg mb-2 label-text">Multiplier (Q):</label>
+                <input type="text" id="multiplier" class="border border-gray-300 p-2 w-full rounded" placeholder="Enter multiplier in binary">
+            </div>
+            <button id="calculate" class="w-full bg-blue-500 text-white hover:bg-blue-400 py-2 rounded-lg transition duration-300 ease-in-out">Calculate</button>
+            <div id="result" class="mt-4 w-full max-w-md bg-white p-4 border border-gray-300 rounded text-primary-foreground"></div>
+        </div>
+    </div>
+</body>
+</html>
